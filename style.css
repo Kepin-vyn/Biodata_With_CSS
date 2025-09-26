@@ -40,7 +40,7 @@ li{
     margin: 0px 16px;
 }
 
-ul li a{
+.index ul li a{
     font-size: 16px;
     text-decoration: none;
     color: #EFDCAB;
@@ -84,4 +84,116 @@ ul li a:hover{
     width: 300px;
     height: auto;
     left : 40%;
+}
+
+/* Flex kiri-kanan */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    gap: 40px;
+    background-color: #1f3324; /* hijau tua seperti contoh */
+}
+
+/* ========== TIMELINE EDUCATION ========== */
+.timeline {
+    flex: 1;
+    position: relative;
+    padding-left: 40px;
+    border-left: 3px solid #e67e22;
+}
+
+.timeline h2 {
+    color: #e67e22;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "◆";
+    position: absolute;
+    left: -32px;
+    top: 0;
+    font-size: 18px;
+    color: #e67e22;
+}
+
+.timeline-date {
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.timeline-content h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #fff;
+}
+
+.timeline-content p {
+    font-size: 14px;
+    color: #ccc;
+    margin: 5px 0 0;
+}
+
+/* ========== SKILLS SECTION ========== */
+.skills-section {
+    flex: 1;
+}
+
+.skills-section h2 {
+    color: #e67e22;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.skills-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.software-skills h3,
+.coding-skills h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.icons span {
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.coding-skills p {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.coding-skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.coding-skills ul li {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 14px;
 }
