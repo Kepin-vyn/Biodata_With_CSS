@@ -35,17 +35,18 @@ ul{
 }
 
 li{
+    text-decoration: none;
     list-style: none;
     display: inline-block;
     margin: 0px 16px;
 }
 
-.index ul li a{
+.navbar ul li a{
     font-size: 16px;
-    text-decoration: none;
     color: #EFDCAB;
     text-transform: uppercase;
     font-weight: bold;
+    text-decoration: none;
     margin-top: -3%;
     transition: 0.4s;
 }
@@ -86,25 +87,32 @@ ul li a:hover{
     left : 40%;
 }
 
-/* Flex kiri-kanan */
 .top-section {
     display: flex;
     justify-content: space-between;
     padding: 60px;
     gap: 40px;
-    background-color: #1f3324; /* hijau tua seperti contoh */
+    background-color: #EFDCAB;
 }
+
+/* Khusus halaman About Me */
+body.about-page .main {
+    height: auto;   /* tidak fixed fullscreen */
+    min-height: 50px; /* cukup untuk navbar */
+    background: #443627; /* tetap pakai background kalau mau */
+}
+
 
 /* ========== TIMELINE EDUCATION ========== */
 .timeline {
     flex: 1;
     position: relative;
     padding-left: 40px;
-    border-left: 3px solid #e67e22;
+    border-left: 3px solid #443627;
 }
 
 .timeline h2 {
-    color: #e67e22;
+    color: #443627;
     margin-bottom: 30px;
     font-size: 26px;
 }
@@ -120,26 +128,20 @@ ul li a:hover{
     left: -32px;
     top: 0;
     font-size: 18px;
-    color: #e67e22;
+    color: #443627;
 }
 
 .timeline-date {
     font-weight: bold;
     font-size: 16px;
-    color: #fff;
+    color: #D98324;
     margin-bottom: 5px;
 }
 
 .timeline-content h3 {
     font-size: 18px;
     margin: 0;
-    color: #fff;
-}
-
-.timeline-content p {
-    font-size: 14px;
-    color: #ccc;
-    margin: 5px 0 0;
+    color: #D98324;
 }
 
 /* ========== SKILLS SECTION ========== */
@@ -148,7 +150,7 @@ ul li a:hover{
 }
 
 .skills-section h2 {
-    color: #e67e22;
+    color: #443627;
     margin-bottom: 20px;
     font-size: 26px;
 }
@@ -159,9 +161,12 @@ ul li a:hover{
     gap: 40px;
 }
 
-.software-skills h3,
+.coding-skills {
+    flex: 0.8;
+}
+
 .coding-skills h3 {
-    color: #fff;
+    color: #D98324;
     margin-bottom: 10px;
 }
 
@@ -173,8 +178,8 @@ ul li a:hover{
 
 .icons span {
     display: inline-block;
-    background-color: #fff;
-    color: #333;
+    background-color: #D98324;
+    color: #443627;
     font-weight: bold;
     font-size: 14px;
     padding: 10px 15px;
@@ -183,17 +188,93 @@ ul li a:hover{
 }
 
 .coding-skills p {
-    color: #ccc;
+    color: #443627;
     margin-bottom: 10px;
 }
 
 .coding-skills ul {
     list-style: none;
+    display: flex;
     padding: 0;
 }
 
 .coding-skills ul li {
-    color: #fff;
+    color: #D98324;
     margin-bottom: 5px;
     font-size: 14px;
+}
+
+/* Bottom Section */
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    gap: 40px;
+    background-color: #443627;
+}
+
+/* Language */
+.language-section {
+    flex: 1;
+}
+
+.language-section h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.language-list {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.lang-item h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #D98324;
+    font-weight: bold;
+}
+
+.lang-item p {
+    font-size: 14px;
+    margin: 5px 0 0;
+    color: #fff;
+}
+
+/* Hobbies */
+.hobbies-section {
+    flex: 1;
+}
+
+.hobbies-section h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.hobbies-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hobby-item {
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+}
+
+.hobby-item i {
+    font-size: 30px;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.hobby-item p {
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
 }
